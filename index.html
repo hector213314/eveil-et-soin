@@ -1,95 +1,200 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Éveil & Soin — Soin énergétique</title>
-  <meta name="description" content="Soin énergétique holistique : harmonisez votre énergie et retrouvez votre équilibre. Séances en présentiel et à distance.">
-  <meta name="theme-color" content="#d4af37">
-  <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:0;color:#3f2f23;
-      background:linear-gradient(180deg,rgba(246,231,182,.9) 0%,rgba(234,203,136,.9) 100%);}
-    header{background:rgba(255,215,0,.85);padding:12px 0;text-align:center;
-      font-weight:700;font-size:1.2rem}
-    .container{max-width:1100px;margin:40px auto;padding:24px;background:rgba(255,255,255,.88);
-      border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.15)}
-    h1,h2{color:#b8860b;margin-top:0}
-    .btn{background:#ffd700;color:#3f2f23;padding:12px 20px;border-radius:25px;
-      text-decoration:none;font-weight:700;border:none;cursor:pointer;display:inline-block;text-align:center}
-    .btn:hover{opacity:.9}
-    form{display:flex;flex-direction:column;gap:12px}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #cfc3a0;font-size:1rem;background:#fff}
-    textarea{min-height:140px}
-    .success,.error{display:none;margin-top:10px;padding:10px;border-radius:8px}
-    .success{background:#e9f9ee;border:1px solid #9addb0;color:#1f6b36}
-    .error{background:#fdeaea;border:1px solid #e2a4a4;color:#7a1f1f}
-    ul{margin-left:20px}
-    @media(max-width:640px){.container{margin:20px auto;padding:18px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Éveil & Soin — Soin énergétique</title>
+<meta name="description" content="Soin énergétique holistique : harmonisez votre énergie et retrouvez votre équilibre. Séances en présentiel et à distance." />
+<meta name="theme-color" content="#d4af37" />
+<style>
+  :root{--ink:#3f2f23;--gold:#b8860b;--gold-soft:#ffd700;--glass:rgba(255,255,255,.88);--shadow:0 4px 20px rgba(0,0,0,.15);--bg1:rgba(246,231,182,.9);--bg2:rgba(234,203,136,.9)}
+  *{box-sizing:border-box} html,body{margin:0}
+  body{font-family:Arial,Helvetica,system-ui; color:var(--ink); background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%)}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,215,0,.85);border-bottom:1px solid rgba(0,0,0,.06)}
+  .nav{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+  .brand{font-weight:800}
+  .nav a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:10px}
+  .nav a:hover{background:rgba(0,0,0,.06)}
+  .container{max-width:1100px;margin:28px auto;padding:0 18px}
+  .card{background:var(--glass);padding:22px;border-radius:12px;box-shadow:var(--shadow)}
+  h1,h2,h3{color:var(--gold);margin:0 0 12px}
+  h1{font-size:clamp(28px,5.4vw,44px);line-height:1.15}
+  .lead{margin:0 0 18px}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  ul{margin:0 0 8px 20px}
+  .btn{display:inline-block;background:var(--gold-soft);color:var(--ink);padding:12px 20px;border-radius:25px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+  .btn:hover{opacity:.92}
+  form{display:flex;flex-direction:column;gap:12px}
+  input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #cfc3a0;background:#fff;font-size:1rem}
+  textarea{min-height:140px}
+  .success,.error{display:none;margin-top:10px;padding:10px;border-radius:8px}
+  .success{background:#e9f9ee;border:1px solid #9addb0;color:#1f6b36}
+  .error{background:#fdeaea;border:1px solid #e2a4a4;color:#7a1f1f}
+  footer{padding:34px 0 60px}
+  footer .inner{max-width:1100px;margin:0 auto;padding:0 18px;text-align:center;color:#4b3a2b}
+</style>
 </head>
 <body>
-  <header>Éveil & Soin — Soin énergétique</header>
-
-  <div class="container">
-    <h1>Harmonisez votre énergie — Retrouvez votre équilibre</h1>
-    <p>Séances douces et personnalisées pour relâcher les tensions, apaiser l’esprit et raviver l’élan vital. En présentiel ou à distance.</p>
-
-    <h2>Infos pratiques</h2>
-    <ul>
-      <li>Séances en présentiel et à distance</li>
-      <li>Durée moyenne : 40 à 60 minutes</li>
-      <li>Suivi et conseils personnalisés après la séance</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <!-- Formulaire Formspree -->
-    <form id="contact-form" action="https://formspree.io/f/mwpqykky" method="POST">
-      <input type="hidden" name="_subject" value="Nouveau message — Éveil & Soin">
-      <input type="text" name="name" placeholder="Votre nom" required>
-      <input type="email" name="email" placeholder="Votre email" required>
-      <textarea name="message" placeholder="Votre message" required></textarea>
-      <!-- anti-spam (honeypot) -->
-      <input type="text" name="_gotcha" style="display:none">
-      <button type="submit" class="btn">Envoyer</button>
-      <div class="success" id="success">Merci ! Votre message a bien été envoyé.</div>
-      <div class="error" id="error">Oups, une erreur est survenue. Réessayez plus tard, ou contactez-moi via Facebook.</div>
-    </form>
-
-    <!-- Bouton Facebook -->
-    <div style="margin-top: 15px;">
-      <a href="https://www.facebook.com/eveiletsoinsenergetique/" target="_blank" class="btn">🌐 Page Facebook</a>
-    </div>
+<header>
+  <div class="nav">
+    <div class="brand">Éveil & Soin — Soin énergétique</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#legales">Légales</a>
+    </nav>
   </div>
+</header>
 
-  <script>
-    // Envoi AJAX pour rester sur la page et afficher un message de succès
-    const form = document.getElementById('contact-form');
-    const ok = document.getElementById('success');
-    const ko = document.getElementById('error');
+<main id="top">
+  <!-- Hero -->
+  <section class="container">
+    <div class="card">
+      <h1>Harmonisez votre énergie — Retrouvez votre équilibre</h1>
+      <p class="lead">Séances douces et personnalisées pour relâcher les tensions, apaiser l’esprit et raviver l’élan vital. En présentiel ou à distance.</p>
+    </div>
+  </section>
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      ok.style.display = 'none';
-      ko.style.display = 'none';
+  <!-- Infos pratiques -->
+  <section class="container">
+    <div class="card">
+      <h2>Infos pratiques</h2>
+      <ul>
+        <li>Séances en présentiel et à distance</li>
+        <li>Durée moyenne : 40 à 60 minutes</li>
+        <li>Suivi et conseils personnalisés après la séance</li>
+      </ul>
+    </div>
+  </section>
 
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-        if (res.ok) {
-          form.reset();
-          ok.style.display = 'block';
-          window.scrollTo({ top: form.offsetTop - 20, behavior: 'smooth' });
-        } else {
-          ko.style.display = 'block';
-        }
-      } catch {
-        ko.style.display = 'block';
-      }
-    });
-  </script>
+  <!-- Services -->
+  <section id="services" class="container">
+    <h2>Services</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Soin énergétique — Rééquilibrage</h3>
+        <ul>
+          <li>Harmonisation des centres énergétiques (chakras)</li>
+          <li>Détente profonde, libération des blocages</li>
+          <li>Apaisement du stress, clarté d’esprit</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Soin à distance</h3>
+        <ul>
+          <li>Guidé en visio ou audio</li>
+          <li>Qualité de présence identique</li>
+          <li>Suivi après séance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Accompagnement bien-être</h3>
+        <ul>
+          <li>Parcours de 3 à 5 séances</li>
+          <li>Respiration, rituels simples</li>
+          <li>Conseils à la maison</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="tarifs" class="container">
+    <h2>Tarifs</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Séance individuelle</h3>
+        <p>Durée moyenne : 40 à 60 minutes.</p>
+        <p><strong>À partir de 50€</strong></p>
+      </div>
+      <div class="card">
+        <h3>Forfait 3 séances</h3>
+        <p>Accompagnement ciblé sur 1 mois.</p>
+        <p><strong>135€</strong></p>
+      </div>
+      <div class="card">
+        <h3>À distance</h3>
+        <p>Même qualité de présence, depuis chez vous.</p>
+        <p><strong>50€</strong></p>
+      </div>
+    </div>
+    <p style="opacity:.8">Tarifs indicatifs — ajustés selon la situation. Règlement en fin de séance.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container">
+    <h2>FAQ</h2>
+    <div class="card">
+      <details>
+        <summary>Comment se déroule une séance ?</summary>
+        <p>Accueil et échange, séance de soin en position confortable, puis retour et conseils pour prolonger les effets.</p>
+      </details>
+      <details>
+        <summary>Puis-je réserver à distance ?</summary>
+        <p>Oui, les soins à distance se font en visio ou téléphone, avec un cadre aussi rassurant qu’en présentiel.</p>
+      </details>
+      <details>
+        <summary>Y a-t-il des contre-indications ?</summary>
+        <p>Le soin énergétique ne remplace pas un suivi médical. En cas de doute, demandez toujours l’avis d’un professionnel de santé.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="grid grid-2">
+      <form id="contact-form" class="card" action="https://formspree.io/f/mwpqykky" method="POST">
+        <input type="hidden" name="_subject" value="Nouveau message — Éveil & Soin">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="btn">Envoyer</button>
+        <div class="success" id="success">Merci ! Votre message a bien été envoyé.</div>
+        <div class="error" id="error">Oups, une erreur est survenue. Réessayez plus tard, ou contactez-moi via Facebook.</div>
+      </form>
+
+      <div class="card">
+        <p>Vous pouvez aussi m’écrire en message privé sur Facebook.</p>
+        <p><a class="btn" href="https://www.facebook.com/eveiletsoinsenergetique/" target="_blank" rel="noopener">🌐 Page Facebook</a></p>
+        <p style="opacity:.8"><small>Temps de réponse habituel : 24h.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Légales -->
+  <section id="legales" class="container">
+    <h2>Mentions légales & confidentialité</h2>
+    <div class="card">
+      <p><strong>Éditeur</strong> : Éveil & Soin — soin énergétique. France.</p>
+      <p>Le soin énergétique est une démarche de bien-être et ne se substitue pas à un suivi médical.</p>
+      <p>Données : utilisées uniquement pour répondre aux demandes (droit d’accès/suppression sur simple message).</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <small>© <span id="year"></span> Éveil & Soin — Tous droits réservés.</small>
+  </div>
+</footer>
+
+<script>
+  const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+  // Envoi AJAX Formspree
+  const form=document.getElementById('contact-form'), ok=document.getElementById('success'), ko=document.getElementById('error');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault(); ok.style.display='none'; ko.style.display='none';
+    try{
+      const r=await fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+      if(r.ok){form.reset(); ok.style.display='block'; window.scrollTo({top:form.offsetTop-20,behavior:'smooth'});} else ko.style.display='block';
+    }catch{ko.style.display='block'}
+  });
+</script>
 </body>
 </html>
 
