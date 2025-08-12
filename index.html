@@ -2,252 +2,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Éveil & Soin — Soin énergétique</title>
-  <meta name="description" content="Soin énergétique holistique : harmonisez votre énergie et retrouvez votre équilibre. Séances en présentiel et à distance." />
-  <meta name="theme-color" content="#d4af37" />
+  <meta name="description" content="Soin énergétique holistique : harmonisez votre énergie et retrouvez votre équilibre. Séances en présentiel et à distance.">
+  <meta name="theme-color" content="#d4af37">
   <style>
-    :root{
-      --ink:#3f2f23; --gold:#b8860b; --gold-soft:#ffd700;
-      --glass:rgba(255,255,255,.92); --shadow:0 14px 36px rgba(0,0,0,.18);
-      --bg-top:rgba(246,231,182,.95); --bg-bottom:rgba(234,203,136,.95);
-    }
-    *{box-sizing:border-box} html,body{margin:0}
-    body{
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      color:var(--ink); background:linear-gradient(180deg,var(--bg-top) 0%,var(--bg-bottom) 100%);
-      min-height:100vh;
-    }
-    header{position:sticky;top:0;z-index:20;background:rgba(255,215,0,.88);
-      border-bottom:1px solid rgba(0,0,0,.06); backdrop-filter:saturate(140%) blur(6px)}
-    .nav{max-width:1100px;margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:12px;justify-content:space-between}
-    .brand{font-weight:800}
-    .nav a{color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:12px}
-    .nav a:hover{background:rgba(0,0,0,.05)}
-    .lang{display:flex;gap:8px}
-    .lang button{border:none;background:#fff;color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-    .lang button.active{background:var(--ink);color:#fff}
-
-    .container{max-width:1100px;margin:28px auto;padding:18px}
-    .card{background:var(--glass);border-radius:16px;box-shadow:var(--shadow);padding:22px}
-    h1,h2,h3{color:var(--gold);margin:0 0 12px}
-    h1{font-size:clamp(28px,5.5vw,44px);line-height:1.1}
-    .lead{font-size:clamp(16px,2.6vw,19px);margin:0 0 18px}
-    .btn{display:inline-block;background:var(--gold-soft);color:var(--ink);padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 8px 16px rgba(0,0,0,.12)}
-    .btn:hover{opacity:.92}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
-    ul{margin:0 0 6px 18px} .muted{color:#5b4c3a}
-    details{background:var(--glass);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
-    details+details{margin-top:10px}
+    body{font-family:Arial,sans-serif;margin:0;padding:0;color:#3f2f23;
+      background:linear-gradient(180deg,rgba(246,231,182,.9) 0%,rgba(234,203,136,.9) 100%);}
+    header{background:rgba(255,215,0,.85);padding:12px 0;text-align:center;
+      font-weight:700;font-size:1.2rem}
+    .container{max-width:1100px;margin:40px auto;padding:24px;background:rgba(255,255,255,.88);
+      border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+    h1,h2{color:#b8860b;margin-top:0}
+    .btn{background:#ffd700;color:#3f2f23;padding:12px 20px;border-radius:25px;
+      text-decoration:none;font-weight:700;border:none;cursor:pointer;display:inline-block;text-align:center}
+    .btn:hover{opacity:.9}
     form{display:flex;flex-direction:column;gap:12px}
-    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid #d6c28a;font-size:16px;background:#fff}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #cfc3a0;font-size:1rem;background:#fff}
     textarea{min-height:140px}
-    footer{padding:34px 0 60px}
-    footer .inner{max-width:1100px;margin:0 auto;padding:0 18px;color:#4b3a2b;text-align:center}
-    @media(max-width:520px){.container{margin:18px auto;padding:14px}.card{padding:16px;border-radius:14px}}
+    ul{margin-left:20px}
+    @media(max-width:640px){.container{margin:20px auto;padding:18px}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand"><a href="#top" style="text-decoration:none;color:inherit" data-i18n="brand">Éveil & Soin — Soin énergétique</a></div>
-      <nav>
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#tarifs" data-i18n="nav_tarifs">Tarifs</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-        <a href="#legales" data-i18n="nav_legales">Légales</a>
-      </nav>
-      <div class="lang" aria-label="Language">
-        <button type="button" data-lang="fr" class="active">FR</button>
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="nl">NL</button>
-      </div>
+  <header>Éveil & Soin — Soin énergétique</header>
+
+  <div class="container">
+    <h1>Harmonisez votre énergie — Retrouvez votre équilibre</h1>
+    <p>Séances douces et personnalisées pour relâcher les tensions, apaiser l’esprit et raviver l’élan vital. En présentiel ou à distance.</p>
+
+    <h2>Infos pratiques</h2>
+    <ul>
+      <li>Séances en présentiel et à distance</li>
+      <li>Durée moyenne : 40 à 60 minutes</li>
+      <li>Suivi et conseils personnalisés après la séance</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <form action="mailto:eveiletsoin2@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <input type="submit" value="Envoyer" class="btn">
+    </form>
+
+    <!-- Bouton Facebook -->
+    <div style="margin-top: 15px;">
+      <a href="https://www.facebook.com/eveiletsoinsenergetique/" target="_blank" class="btn">🌐 Page Facebook</a>
     </div>
-  </header>
-
-  <main id="top">
-    <!-- HERO -->
-    <section class="container">
-      <div class="card">
-        <h1 data-i18n="hero_title">Harmonisez votre énergie — Retrouvez votre équilibre</h1>
-        <p class="lead" data-i18n="hero_lead">Séances douces et personnalisées pour relâcher les tensions, apaiser l’esprit et raviver l’élan vital. En présentiel ou à distance.</p>
-        <a class="btn" href="https://www.facebook.com/eveiletsoinsenergetique/" target="_blank" rel="noopener" data-i18n="cta_fb">Me contacter sur Facebook</a>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="container">
-      <h2 data-i18n="services_title">Services</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3 data-i18n="srv1_title">Soin énergétique — Rééquilibrage</h3>
-          <p class="muted" data-i18n="srv1_desc">Harmonisation des centres énergétiques (chakras), détente profonde et libération des blocages.</p>
-          <ul>
-            <li data-i18n="srv1_b1">Apaisement du stress</li>
-            <li data-i18n="srv1_b2">Sommeil plus serein</li>
-            <li data-i18n="srv1_b3">Regain d’énergie et clarté</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 data-i18n="srv2_title">Soin à distance</h3>
-          <p class="muted" data-i18n="srv2_desc">Séance guidée en visio ou audio. Idéal si vous ne pouvez pas vous déplacer.</p>
-          <ul>
-            <li data-i18n="srv2_b1">Guidance personnalisée</li>
-            <li data-i18n="srv2_b2">Suivi après séance</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 data-i18n="srv3_title">Accompagnement bien-être</h3>
-          <p class="muted" data-i18n="srv3_desc">Parcours de 3 à 5 séances pour ancrer les bénéfices (respiration, rituels simples).</p>
-          <ul>
-            <li data-i18n="srv3_b1">Programme progressif</li>
-            <li data-i18n="srv3_b2">Conseils à la maison</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TARIFS -->
-    <section id="tarifs" class="container">
-      <h2 data-i18n="pricing_title">Tarifs</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3 data-i18n="p1_title">Séance individuelle</h3>
-          <p class="muted" data-i18n="p1_desc">Durée moyenne : 40 à 60 minutes.</p>
-          <p><strong data-i18n="p1_price">À partir de 50€</strong></p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="p2_title">Forfait 3 séances</h3>
-          <p class="muted" data-i18n="p2_desc">Accompagnement ciblé sur 1 mois.</p>
-          <p><strong data-i18n="p2_price">135€</strong></p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="p3_title">À distance</h3>
-          <p class="muted" data-i18n="p3_desc">Même qualité de présence, depuis chez vous.</p>
-          <p><strong data-i18n="p3_price">50€</strong></p>
-        </div>
-      </div>
-      <p class="muted" data-i18n="pricing_note">Tarifs indicatifs — ajustés selon la situation. Règlement en fin de séance.</p>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="container">
-      <h2 data-i18n="faq_title">FAQ</h2>
-      <details>
-        <summary data-i18n="q1">Comment se déroule une séance ?</summary>
-        <p data-i18n="a1">Accueil et échange, séance de soin en position confortable, puis retour et conseils pour prolonger les effets.</p>
-      </details>
-      <details>
-        <summary data-i18n="q2">Puis-je réserver à distance ?</summary>
-        <p data-i18n="a2">Oui, les soins à distance se font en visio ou téléphone, avec un cadre aussi rassurant qu’en présentiel.</p>
-      </details>
-      <details>
-        <summary data-i18n="q3">Y a-t-il des contre-indications ?</summary>
-        <p data-i18n="a3">Le soin énergétique ne remplace pas un suivi médical. En cas de doute, demandez toujours l’avis d’un professionnel de santé.</p>
-      </details>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-      <h2 data-i18n="contact_title">Contact</h2>
-      <div class="grid grid-2">
-        <!-- 🔔 Formspree : remplace l'ID du formulaire ci-dessous -->
-        <form class="card" action="https://formspree.io/f/mwpqykky" method="POST">
-          <input type="hidden" name="_subject" value="Nouveau message — Éveil & Soin">
-          <input type="text" name="name" placeholder="Nom" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Message" rows="6" required></textarea>
-          <!-- honeypot anti-spam -->
-          <input type="text" name="_gotcha" style="display:none">
-          <button class="btn" type="submit" data-i18n="f_send">Envoyer</button>
-          <p class="muted"><small data-i18n="f_privacy">Vos données servent uniquement à répondre à votre demande.</small></p>
-        </form>
-        <div class="card">
-          <p data-i18n="contact_alt">Vous pouvez aussi m’écrire en message privé sur Facebook.</p>
-          <p><a class="btn" href="https://www.facebook.com/eveiletsoinsenergetique/" target="_blank" rel="noopener" data-i18n="cta_fb">Me contacter sur Facebook</a></p>
-          <p class="muted"><small data-i18n="contact_note">Temps de réponse habituel : 24h.</small></p>
-        </div>
-      </div>
-      <p class="muted"><small data-i18n="contact_note2">Si le bouton n’ouvre pas d’email, utilisez le formulaire ci-dessus.</small></p>
-    </section>
-
-    <!-- LÉGALES -->
-    <section id="legales" class="container">
-      <h2 data-i18n="legal_title">Mentions légales & confidentialité</h2>
-      <div class="card">
-        <p><strong>Éditeur</strong> : Éveil & Soin — soin énergétique. <span data-i18n="legal_city">France</span>.</p>
-        <p data-i18n="legal_health">Le soin énergétique est une démarche de bien-être et ne se substitue pas à un suivi médical.</p>
-        <p data-i18n="legal_privacy">Données : utilisées uniquement pour répondre aux demandes (droit d’accès/suppression sur simple message).</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="inner"><small>© <span id="year"></span> Éveil & Soin — <span data-i18n="footer_rights">Tous droits réservés.</span></small></div>
-  </footer>
-
-  <script>
-    // i18n dictionnaire
-    const dict = {
-      fr:{brand:"Éveil & Soin — Soin énergétique", nav_services:"Services", nav_tarifs:"Tarifs", nav_faq:"FAQ", nav_contact:"Contact", nav_legales:"Légales",
-        hero_title:"Harmonisez votre énergie — Retrouvez votre équilibre", hero_lead:"Séances douces et personnalisées pour relâcher les tensions, apaiser l’esprit et raviver l’élan vital. En présentiel ou à distance.", cta_fb:"Me contacter sur Facebook",
-        services_title:"Services", srv1_title:"Soin énergétique — Rééquilibrage", srv1_desc:"Harmonisation des centres énergétiques (chakras), détente profonde et libération des blocages.", srv1_b1:"Apaisement du stress", srv1_b2:"Sommeil plus serein", srv1_b3:"Regain d’énergie et clarté",
-        srv2_title:"Soin à distance", srv2_desc:"Séance guidée en visio ou audio. Idéal si vous ne pouvez pas vous déplacer.", srv2_b1:"Guidance personnalisée", srv2_b2:"Suivi après séance",
-        srv3_title:"Accompagnement bien-être", srv3_desc:"Parcours de 3 à 5 séances pour ancrer les bénéfices (respiration, rituels simples).", srv3_b1:"Programme progressif", srv3_b2:"Conseils à la maison",
-        pricing_title:"Tarifs", p1_title:"Séance individuelle", p1_desc:"Durée moyenne : 40 à 60 minutes.", p1_price:"À partir de 50€", p2_title:"Forfait 3 séances", p2_desc:"Accompagnement ciblé sur 1 mois.", p2_price:"135€", p3_title:"À distance", p3_desc:"Même qualité de présence, depuis chez vous.", p3_price:"50€", pricing_note:"Tarifs indicatifs — ajustés selon la situation. Règlement en fin de séance.",
-        faq_title:"FAQ", q1:"Comment se déroule une séance ?", a1:"Accueil et échange, séance de soin en position confortable, puis retour et conseils pour prolonger les effets.", q2:"Puis-je réserver à distance ?", a2:"Oui, les soins à distance se font en visio ou téléphone, avec un cadre aussi rassurant qu’en présentiel.", q3:"Y a-t-il des contre-indications ?", a3:"Le soin énergétique ne remplace pas un suivi médical. En cas de doute, demandez toujours l’avis d’un professionnel de santé.",
-        contact_title:"Contact", f_send:"Envoyer", f_privacy:"Vos données servent uniquement à répondre à votre demande.", contact_alt:"Vous pouvez aussi m’écrire en message privé sur Facebook.", contact_note:"Temps de réponse habituel : 24h.", contact_note2:"Si le bouton n’ouvre pas d’email, utilisez le formulaire ci-dessus.",
-        legal_title:"Mentions légales & confidentialité", legal_city:"France", legal_health:"Le soin énergétique est une démarche de bien-être et ne se substitue pas à un suivi médical.", legal_privacy:"Données : utilisées uniquement pour répondre aux demandes (droit d’accès/suppression sur simple message).", footer_rights:"Tous droits réservés."},
-
-      en:{brand:"Awakening & Care — Energy Healing", nav_services:"Services", nav_tarifs:"Pricing", nav_faq:"FAQ", nav_contact:"Contact", nav_legales:"Legal",
-        hero_title:"Balance your energy — Reclaim your equilibrium", hero_lead:"Gentle, tailored sessions to release tension, calm the mind and revive vital energy. In-person or remote.", cta_fb:"Contact me on Facebook",
-        services_title:"Services", srv1_title:"Energy Healing — Balancing", srv1_desc:"Harmonising energy centres (chakras), deep relaxation and release of blockages.", srv1_b1:"Stress relief", srv1_b2:"Better sleep", srv1_b3:"More energy & clarity",
-        srv2_title:"Remote session", srv2_desc:"Guided via video or audio. Ideal if you can't travel.", srv2_b1:"Personalised guidance", srv2_b2:"After-session follow-up",
-        srv3_title:"Wellbeing program", srv3_desc:"3–5 sessions to anchor benefits (breathwork, simple rituals).", srv3_b1:"Progressive program", srv3_b2:"Home practices",
-        pricing_title:"Pricing", p1_title:"Single session", p1_desc:"Average duration: 40–60 minutes.", p1_price:"From €50", p2_title:"3-session pack", p2_desc:"Focused 1-month support.", p2_price:"€135", p3_title:"Remote", p3_desc:"Same quality of presence, from home.", p3_price:"€50", pricing_note:"Indicative prices — may adjust to your situation. Payment after session.",
-        faq_title:"FAQ", q1:"How does a session unfold?", a1:"Welcome & conversation, comfortable session, then feedback and tips to extend the benefits.", q2:"Can I book remotely?", a2:"Yes, remote sessions via video or phone are as reassuring as in person.", q3:"Any contraindications?", a3:"Energy healing does not replace medical care. When in doubt, consult a professional.",
-        contact_title:"Contact", f_send:"Send", f_privacy:"Your data is only used to answer your request.", contact_alt:"You can also message me on Facebook.", contact_note:"Typical response time: 24h.", contact_note2:"If the email button doesn’t open, use the form above.",
-        legal_title:"Legal & privacy", legal_city:"France", legal_health:"Energy healing supports wellbeing and is not a substitute for medical care.", legal_privacy:"Data used solely to answer your request (access/deletion on request).", footer_rights:"All rights reserved."},
-
-      nl:{brand:"Ontwaken & Zorg — Energetische Heling", nav_services:"Diensten", nav_tarifs:"Tarieven", nav_faq:"FAQ", nav_contact:"Contact", nav_legales:"Juridisch",
-        hero_title:"Breng je energie in balans — Vind je evenwicht terug", hero_lead:"Zachte, persoonlijke sessies om spanning los te laten, de geest te kalmeren en je vitale energie te versterken. Live of op afstand.", cta_fb:"Contacteer mij op Facebook",
-        services_title:"Diensten", srv1_title:"Energetische heling — Balans", srv1_desc:"Harmonisatie van energiecentra (chakra’s), diepe ontspanning en het loslaten van blokkades.", srv1_b1:"Stressvermindering", srv1_b2:"Betere slaap", srv1_b3:"Meer energie & helderheid",
-        srv2_title:"Sessie op afstand", srv2_desc:"Begeleid via video of audio. Ideaal als je niet kan reizen.", srv2_b1:"Persoonlijke begeleiding", srv2_b2:"Opvolging na de sessie",
-        srv3_title:"Welzijnstraject", srv3_desc:"3–5 sessies om de voordelen te verankeren (ademhaling, eenvoudige rituelen).", srv3_b1:"Geleidelijk programma", srv3_b2:"Oefeningen thuis",
-        pricing_title:"Tarieven", p1_title:"Individuele sessie", p1_desc:"Gemiddelde duur: 40–60 minuten.", p1_price:"Vanaf €50", p2_title:"Pakket 3 sessies", p2_desc:"Gerichte begeleiding gedurende 1 maand.", p2_price:"€135", p3_title:"Op afstand", p3_desc:"Dezelfde kwaliteit van aanwezigheid, vanuit huis.", p3_price:"€50", pricing_note:"Richtprijzen — aangepast aan jouw situatie. Betaling na de sessie.",
-        faq_title:"FAQ", q1:"Hoe verloopt een sessie?", a1:"Welkom & gesprek, comfortabele sessie, daarna feedback en tips om de effecten te verlengen.", q2:"Kan ik op afstand reserveren?", a2:"Ja, sessies op afstand via video of telefoon zijn even geruststellend.", q3:"Contra-indicaties?", a3:"Energetische heling vervangt geen medische zorg. Raadpleeg bij twijfel een arts.",
-        contact_title:"Contact", f_send:"Verzenden", f_privacy:"Je gegevens worden alleen gebruikt om te antwoorden.", contact_alt:"Je kan me ook een privébericht sturen op Facebook.", contact_note:"Gemiddelde responstijd: 24u.", contact_note2:"Werkt e-mail niet, gebruik het formulier hierboven.",
-        legal_title:"Juridisch & privacy", legal_city:"Frankrijk", legal_health:"Energetische heling ondersteunt welzijn en vervangt geen medische zorg.", legal_privacy:"Gegevens: enkel gebruikt om aanvragen te beantwoorden (inzage/verwijdering op verzoek).", footer_rights:"Alle rechten voorbehouden."}
-    };
-
-    const applyLang = (l)=>{
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const k = el.getAttribute('data-i18n');
-        if(dict[l] && dict[l][k]) el.textContent = dict[l][k];
-      });
-      document.documentElement.lang = l;
-      document.querySelectorAll('.lang button').forEach(b=> b.classList.toggle('active', b.dataset.lang===l));
-    };
-    document.querySelectorAll('.lang button').forEach(b=> b.addEventListener('click', ()=> applyLang(b.dataset.lang)));
-    applyLang('fr');
-
-    // année footer
-    const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
-
-    // Message de succès Formspree (basique)
-    document.addEventListener('submit', function(e){
-      const form=e.target;
-      if(form.action.includes('formspree.io')){
-        e.preventDefault();
-        fetch(form.action, { method:'POST', body:new FormData(form), headers: { 'Accept':'application/json' }})
-        .then(r=>r.ok?Promise.resolve():Promise.reject())
-        .then(()=>{ alert('Merci ! Votre message a bien été envoyé.'); form.reset(); })
-        .catch(()=>{ alert('Oups, une erreur est survenue. Réessayez plus tard, ou écrivez-moi via Facebook.'); });
-      }
-    });
-  </script>
+  </div>
 </body>
 </html>
